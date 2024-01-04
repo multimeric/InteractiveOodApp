@@ -2,7 +2,7 @@
 # This file defines the form options that will be presented to the user before submission
 # For more information on the manifest, refer to 
 # https://osc.github.io/ood-documentation/latest/how-tos/app-development/interactive/manifest.html#app-development-manifest
-name: Who Am I?
+name: Date Info
 category: Interactive Apps
 role: batch_connect
-description: Prints some information about a user
+description: Prints a date in a specified format

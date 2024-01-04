@@ -1,11 +1,14 @@
 ---
-# 'form' is a list of form choices for this app. Here we're allowing users to set
-# the account and the number of cores they want to request for this job.
+<%#
+'form' is a list of form choices for this app
+%>
 form:
   - date
   - format
 
-# By default, everything defined in 'form' above is a text_field.
+<%#
+Here we can configure the options for each form field
+%>
 attributes:
   date:
     widget: select
