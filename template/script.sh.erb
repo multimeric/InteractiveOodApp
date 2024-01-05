@@ -5,5 +5,7 @@ For more information, see https://osc.github.io/ood-documentation/latest/how-tos
 You can access session information using the session variable, and form input using the context variable: https://osc.github.io/ood-documentation/latest/how-tos/app-development/interactive/template.html#erb-objects
 %>
 mkdir results
-date --date <%= context.date %> +<%= context.format %> > results/index.html
-python3 -m http.server --directory results
+cd results
+date --date <%= context.date %> "+<%= context.datefmt %>" > index.html
+<%# The $port variable is obtained from before.sh.erb %>
+python3 -m http.server $port

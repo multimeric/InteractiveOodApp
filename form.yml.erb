@@ -1,22 +1,29 @@
+<%#
+This file defines the form the user will fill out to configure how the app will be run.
+For more information, refer to https://osc.github.io/ood-documentation/latest/how-tos/app-development/interactive/form.html
+%>
 ---
 <%#
-'form' is a list of form choices for this app
+"form" is a list of form choices for this app
 %>
 form:
   - cluster
   - date
-  - format
+  - datefmt
 
 <%#
-Here we can configure the options for each form field
+Here we configure the options for each form field
 %>
 attributes:
   date:
+    label: Date
     widget: select
     options:
         - now
         - yesterday
         - today
     value: now
-  format:
-    value: "%+"
+  datefmt:
+    label: Format String
+    help: Refer to https://linux.die.net/man/1/date for details on the possible format options
+    value: "%a %b %e %H:%M:%S %Z %Y"
